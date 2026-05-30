@@ -436,7 +436,8 @@ enterprise-agentic-rag-platform/
 │   ├── models/
 │   └── core/
 │
-├── tests/
+├── assets/
+├── frontend/
 ├── uploads/
 ├── docker-compose.yml
 ├── requirements.txt
