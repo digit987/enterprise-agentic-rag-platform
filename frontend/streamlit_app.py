@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-BACKEND_URL = "https://enterprise-agentic-rag-platform-production.up.railway.app/docs"
+BACKEND_URL = "https://enterprise-agentic-rag-platform-production.up.railway.app"
 
 st.set_page_config(
     page_title="Enterprise Agentic RAG",
@@ -65,7 +65,10 @@ if st.button("Submit Query"):
 
     st.markdown("### Response")
 
-    st.write(result["response"])
+    if "response" in result:
+        st.write(result["response"])
+    else:
+        st.error(result)
 
     st.markdown("### Sources")
 
