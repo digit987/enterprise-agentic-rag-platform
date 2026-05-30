@@ -1,5 +1,12 @@
 # Enterprise Agentic RAG Platform
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_Workflows-orange)
+![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-red)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Metadata_DB-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 A production-style Agentic Retrieval-Augmented Generation (RAG) platform featuring hybrid retrieval, graph-based multi-agent orchestration, conversational memory, tool-calling agents, observability pipelines, and web-augmented reasoning workflows.
 
 ---
@@ -17,6 +24,32 @@ This project implements an enterprise-oriented AI assistant architecture capable
 * live web search augmentation.
 
 The system combines FastAPI, LangGraph, PostgreSQL, Qdrant, OpenAI APIs, and multi-agent workflows to simulate production-style AI engineering systems.
+
+---
+
+# Architecture Diagrams
+
+## System Architecture
+
+![System Architecture](assets/system_architecture.png)
+
+The platform combines FastAPI, LangGraph, PostgreSQL, Qdrant, OpenAI APIs, conversational memory, hybrid retrieval, and tool-calling agents into a production-style AI assistant architecture.
+
+---
+
+## Retrieval Pipeline
+
+![Retrieval Pipeline](assets/retrieval_pipeline.png)
+
+The retrieval workflow combines semantic vector search, BM25 keyword retrieval, and CrossEncoder reranking to improve retrieval precision and grounding quality.
+
+---
+
+## Agent Workflow
+
+![Agent Workflow](assets/agent_workflow.png)
+
+LangGraph orchestrates multiple specialized agents including planning, routing, retrieval, verification, tool execution, and response generation.
 
 ---
 
@@ -161,6 +194,88 @@ Supports:
 * memory-aware interactions,
 * tool-calling workflows,
 * web-augmented responses.
+
+---
+
+# API Demonstration
+
+## Swagger Documentation
+
+![Swagger Documentation](assets/swagger_docs.png)
+
+FastAPI automatically generates interactive API documentation for testing ingestion and conversational endpoints.
+
+---
+
+## PDF Ingestion Pipeline
+
+### Upload Request
+
+![Upload PDF Request](assets/upload_pdf_request.png)
+
+### Upload Response
+
+![Upload PDF Response](assets/upload_pdf_response.png)
+
+PDF documents are parsed, chunked, embedded, indexed in Qdrant, and stored with metadata in PostgreSQL.
+
+---
+
+## Retrieval-Augmented Generation
+
+### RAG Request
+
+![RAG Request](assets/rag_request.png)
+
+### RAG Response
+
+![RAG Response](assets/rag_response.png)
+
+Retrieved document chunks are passed through the hybrid retrieval and reranking pipeline before grounded response generation.
+
+---
+
+## Agent Execution Trace
+
+![Agent Logs](assets/agent_logs.png)
+
+The LangGraph workflow executes multiple agents sequentially:
+
+- Planner Agent
+- Router Agent
+- Tool Agent
+- Verification Agent
+- Response Agent
+
+This enables modular orchestration and dynamic workflow execution.
+
+---
+
+## Tool Calling – Calculator
+
+### Calculator Request
+
+![Calculator Request](assets/calculator_tool_request.png)
+
+### Calculator Response
+
+![Calculator Response](assets/calculator_tool_response.png)
+
+The Router Agent dynamically identifies mathematical queries and invokes the Calculator Tool without performing document retrieval.
+
+---
+
+## Tool Calling – Web Search
+
+### Web Search Request
+
+![Web Search Request](assets/web_search_tool_request.png)
+
+### Web Search Response
+
+![Web Search Response](assets/web_search_tool_response.png)
+
+The Web Search Tool uses Tavily to retrieve current information from external sources when user queries require live knowledge beyond uploaded documents.
 
 ---
 

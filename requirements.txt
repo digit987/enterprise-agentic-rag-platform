@@ -34,3 +34,6 @@ python-multipart==0.0.9
 ragas==0.1.9
 
 tavily-python
+
+streamlit
+requests
