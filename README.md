@@ -3,11 +3,26 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_Workflows-orange)
+![OpenAI](https://img.shields.io/badge/OpenAI-LLM-black)
 ![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-red)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Metadata_DB-blue)
+![Railway](https://img.shields.io/badge/Railway-Deployed-purple)
+![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 A production-style Agentic Retrieval-Augmented Generation (RAG) platform featuring hybrid retrieval, graph-based multi-agent orchestration, conversational memory, tool-calling agents, observability pipelines, and web-augmented reasoning workflows.
+
+---
+
+## Live Demo
+
+Frontend Demo:
+https://enterprise-agentic-rag-platform.streamlit.app/
+
+Backend API (Swagger):
+https://enterprise-agentic-rag-platform-production.up.railway.app/docs
+
+Deployed on Railway with PostgreSQL and Qdrant Cloud.
 
 ---
 
