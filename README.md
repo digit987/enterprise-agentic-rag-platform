@@ -279,6 +279,40 @@ The Web Search Tool uses Tavily to retrieve current information from external so
 
 ---
 
+# Streamlit Frontend
+
+A lightweight frontend was developed using Streamlit to provide an interactive interface for document ingestion and conversational retrieval workflows.
+
+## PDF Upload
+
+![Streamlit Home](assets/streamlit_upload_pdf.png)
+
+---
+
+## Chat Interface
+
+![Streamlit Chat](assets/streamlit_chat.png)
+
+---
+
+## Conversational Memory
+
+![Streamlit Sources](assets/streamlit_conversational_memory.png)
+
+---
+
+## Calculator Tool
+
+![Streamlit Sources](assets/streamlit_calculator_tool.png)
+
+---
+
+## Web Search Tool
+
+![Streamlit Sources](assets/streamlit_web_search_tool.png)
+
+---
+
 # Local Setup
 
 ## Clone Repository
