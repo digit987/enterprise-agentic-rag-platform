@@ -45,8 +45,33 @@ The system combines FastAPI, LangGraph, PostgreSQL, Qdrant, OpenAI APIs, and mul
 # Architecture Diagrams
 
 ## System Architecture
-
-![System Architecture](assets/system_architecture.png)
+```
+User
+  ↓
+FastAPI Backend
+  ↓
+LangGraph Orchestrator
+  ↓
+Planner Agent
+  ↓
+Router Agent
+ ├── Retrieval Tool
+ │     ↓
+ │   Hybrid Retrieval
+ │   ├── Qdrant Vector Search
+ │   ├── BM25 Retrieval
+ │   └── CrossEncoder Reranking
+ │
+ ├── Calculator Tool
+ │
+ └── Web Search Tool (Tavily)
+  ↓
+LLM Response Generation
+  ↓
+Conversation Memory
+  ↓
+Evaluation + Observability
+```
 
 The platform combines FastAPI, LangGraph, PostgreSQL, Qdrant, OpenAI APIs, conversational memory, hybrid retrieval, and tool-calling agents into a production-style AI assistant architecture.
 
@@ -54,7 +79,23 @@ The platform combines FastAPI, LangGraph, PostgreSQL, Qdrant, OpenAI APIs, conve
 
 ## Retrieval Pipeline
 
-![Retrieval Pipeline](assets/retrieval_pipeline.png)
+```
+User Query
+   ↓
+Embedding Generation
+   ↓
+Semantic Search (Qdrant)
+   +
+BM25 Retrieval
+   ↓
+Merge Results
+   ↓
+CrossEncoder Reranking
+   ↓
+Top Context Chunks
+   ↓
+LLM Response
+```
 
 The retrieval workflow combines semantic vector search, BM25 keyword retrieval, and CrossEncoder reranking to improve retrieval precision and grounding quality.
 
@@ -62,7 +103,17 @@ The retrieval workflow combines semantic vector search, BM25 keyword retrieval, 
 
 ## Agent Workflow
 
-![Agent Workflow](assets/agent_workflow.png)
+```
+Planner Agent
+   ↓
+Router Agent
+   ↓
+Tool Agent
+   ↓
+Verification Agent
+   ↓
+Response Agent
+```
 
 LangGraph orchestrates multiple specialized agents including planning, routing, retrieval, verification, tool execution, and response generation.
 
@@ -126,32 +177,6 @@ Dynamic tool-routing architecture supporting:
 * Grounding evaluation
 * Retrieval evaluation
 * LangSmith tracing integration
-
----
-
-# System Architecture
-
-```text
-User Query
-    ↓
-FastAPI Backend
-    ↓
-LangGraph Orchestration
-    ↓
-Router Agent
- ├── Retrieval Tool
- ├── Calculator Tool
- └── Web Search Tool
-    ↓
-Hybrid Retrieval Pipeline
- ├── Qdrant Vector Search
- ├── BM25 Retrieval
- └── CrossEncoder Reranking
-    ↓
-LLM Response Generation
-    ↓
-Conversation Memory + Evaluation
-```
 
 ---
 
