@@ -8,7 +8,7 @@ load_dotenv()
 
 
 DATABASE_URL = (
-    f"postgresql://"
+    f"postgresql+psycopg://"
     f"{os.getenv('POSTGRES_USER')}:"
     f"{os.getenv('POSTGRES_PASSWORD')}@"
     f"{os.getenv('POSTGRES_HOST')}:"
