@@ -10,7 +10,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A production-style Agentic Retrieval-Augmented Generation (RAG) platform featuring hybrid retrieval, graph-based multi-agent orchestration, conversational memory, tool-calling agents, observability pipelines, and web-augmented reasoning workflows.
+An enterprise Agentic Retrieval-Augmented Generation (RAG) platform featuring hybrid retrieval, graph-based multi-agent orchestration, conversational memory, tool-calling agents, observability pipelines, and web-augmented reasoning workflows.
 
 ---
 
