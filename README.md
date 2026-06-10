@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_Workflows-orange)
+![LangSmith](https://img.shields.io/badge/LangSmith-Tracing-purple)
 ![OpenAI](https://img.shields.io/badge/OpenAI-LLM-black)
 ![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-red)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Metadata_DB-blue)
